@@ -470,13 +470,13 @@ Objetivos de referencia, no resultados medidos. Se validan y ajustan con datos r
 | 1 | 2026-11-01 | Render core revisado; render headless y consola limpia; FPS en GPU real pendiente. |
 | 2 | 2026-11-01 | Revisada: puertas selladas, techo registrable, molduras, zócalos segmentados; instancing; fixture/techo corregido. Validación en primera persona pendiente. |
 | 3 | 2026-11-01 | Implementada: PBR procedural, luminarias housing/diffuser, 7 RectAreaLight + 3 SpotLight con sombras, entorno PMREM. Corregida orientación de suelo/techo y de RectAreaLight. Build y render headless verificados; FPS en GPU real pendiente. |
-| 4 | — | — |
-| 5 | — | — |
-| 6 | Interactividad y eventos | Anomalías ambientales sutiles | Completada (2026-11-01; validación interactiva pendiente) |
-| 7 | Audio espacial | Soundscape diegético posicional | Completada (2026-11-01; reproducción pendiente de validación interactiva) |
-| 8 | — | — |
-| 9 | — | — |
-| 10 | — | — |
+| 4 | 2026-11-01 | Implementada: controles en primera persona (pointer lock, WASD/sprint), colisiones, overlay e integración en main.js. Build y render headless OK; validación interactiva pendiente. |
+| 5 | 2026-11-01 | Completada: niebla, post-procesado (bloom/film/grano/viñeta), calidad baja y degradación adaptativa; bug de getDrawingBufferSize corregido. Medición GPU real pendiente. |
+| 6 | 2026-11-01 | Completada: parpadeo determinista de luminarias (flicker-a/b/c) integrado en el loop. Validación interactiva pendiente. |
+| 7 | 2026-11-01 | Completada: audio procedural tras gesto, volumen/silencio e indicador SOUND ON/OFF. Reproducción real pendiente de validación. |
+| 8 | 2026-11-01 | Implementada: props narrativos, fundido de entrada, HUD final e indicios de geometría imposible. Revisión visual y recorrido pendientes. |
+| 9 | 2026-11-01 | Auditoría estática y métricas estimadas; código muerto eliminado. Perfilado real y navegadores pendientes. |
+| 10 | 2026-11-01 | Build de producción y preview validados y publicados. QA interactivo y tag pendientes. |
 
 ---
 
