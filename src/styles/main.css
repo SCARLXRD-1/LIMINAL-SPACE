@@ -1,0 +1,127 @@
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #eef3ff;
+  background: #0b0d12;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0b0d12;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #171b22 0%, #0b0d12 55%, #07090d 100%);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#hud {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  z-index: 2;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.34rem;
+  text-transform: uppercase;
+  color: rgba(235, 242, 255, 0.75);
+  background: rgba(15, 18, 23, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#hud-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(10, 13, 18, 0.68);
+  backdrop-filter: blur(6px);
+  pointer-events: auto;
+  user-select: none;
+  transition: opacity 0.35s ease;
+}
+
+#hud-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#hud-overlay-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  color: rgba(235, 242, 255, 0.92);
+}
+
+#hud-overlay-hint {
+  font-size: 0.68rem;
+  letter-spacing: 0.22rem;
+  text-transform: uppercase;
+  color: rgba(235, 242, 255, 0.55);
+}
+
+#hud-audio {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 2;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: rgba(235, 242, 255, 0.45);
+  pointer-events: none;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+#hud-audio.muted {
+  color: rgba(235, 242, 255, 0.24);
+}
+
+#transition-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background: #05070a;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 1200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #transition-veil {
+    transition-duration: 200ms;
+  }
+}
